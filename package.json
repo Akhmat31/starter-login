@@ -1,0 +1,48 @@
+{
+  "name": "aplikasi-toko-online",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vue-tsc && rsbuild build",
+    "dev": "rsbuild",
+    "lint": "eslint .",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "@rsbuild/plugin-node-polyfill": "^1.4.6",
+    "axios": "^1.20.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.4.2",
+    "jsonwebtoken": "^9.0.3",
+    "vue": "^3.5.41",
+    "vue-router": "^5.3.1"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^2.2.1",
+    "@rsbuild/plugin-tailwindcss": "^2.0.3",
+    "@rsbuild/plugin-type-check": "^1.6.0",
+    "@rsbuild/plugin-vue": "^2.0.1",
+    "@types/axios": "^0.14.4",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^26.4.1",
+    "@vue/eslint-config-typescript": "^14.9.0",
+    "eslint": "^10.8.1",
+    "eslint-plugin-vue": "^10.10.0",
+    "globals": "^17.11.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0",
+    "vue-tsc": "^3.3.11",
+    "axios": "^1.20.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express-rate-limit": "^8.5.2",
+    "helmet": "^8.2.0",
+    "ioredis": "^5.11.1",
+    "jsonwebtoken": "^9.0.3",
+    "path": "^0.12.7",
+    "express": "^5.2.1"
+  }
+}
