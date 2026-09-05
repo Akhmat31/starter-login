@@ -1,5 +1,5 @@
 var expressjs = require("express");
-var profile = require("./mock-data");
+var profile = require("./mock-data.cjs");
 
 var app = expressjs();
 var PORT = 8000;
