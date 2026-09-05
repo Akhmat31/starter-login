@@ -29,11 +29,25 @@ let _global_token = function (req, res, next) {
     try {
         let decoded = jwt.verify(token, JWT_SECRET);
 
-        // Validasi parameter client_id dalam token
+        // Validate client_id, audience and issuer
         if (!decoded.client_id || (ALLOWED_CLIENT_ID && decoded.client_id !== ALLOWED_CLIENT_ID)) {
             return res.status(403).json({
                 code: 403,
                 error: "Forbidden: Parameter client_id pada token tidak valid atau tidak diizinkan."
+            });
+        }
+        const expectedAud = process.env.JWT_AUDIENCE || "login-app";
+        const expectedIss = process.env.JWT_ISSUER || "gateway";
+        if (decoded.aud && decoded.aud !== expectedAud) {
+            return res.status(403).json({
+                code: 403,
+                error: "Forbidden: Audience claim tidak sesuai."
+            });
+        }
+        if (decoded.iss && decoded.iss !== expectedIss) {
+            return res.status(403).json({
+                code: 403,
+                error: "Forbidden: Issuer claim tidak sesuai."
             });
         }
 
