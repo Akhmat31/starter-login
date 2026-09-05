@@ -1,7 +1,7 @@
 let express = require("express");
-let { USERS } = require("./http/controller/users");
-let { _global_token } = require("./http/middleware/token/access");
-let { generateSecurityToken, _global_security_token } = require("./http/middleware/token/security-token");
+let { USERS } = require("./http/controller/users.cjs");
+let { _global_token } = require("./http/middleware/token/access.cjs");
+let { generateSecurityToken, _global_security_token } = require("./http/middleware/token/security-token.cjs");
 
 var router = express.Router();
 var user = new USERS();

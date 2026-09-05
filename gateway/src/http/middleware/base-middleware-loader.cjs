@@ -1,7 +1,7 @@
 let express = require("express");
 
-let { _global_limit_requests } = require("./header/ratelimit");
-let { _global_headers } = require("./header/access-origin");
+let { _global_limit_requests } = require("./header/ratelimit.cjs");
+let { _global_headers } = require("./header/access-origin.cjs");
 
 var middleware = express();
 

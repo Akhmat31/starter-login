@@ -4,8 +4,8 @@ const helmet = require("helmet");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const base = require("./src/base");
-const middleware = require("./src/http/middleware/base-middleware-loader");
+const base = require("./src/base.cjs");
+const middleware = require("./src/http/middleware/base-middleware-loader.cjs");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
